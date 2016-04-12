@@ -1,0 +1,574 @@
+{% extends "tjinc/base.html" %}
+
+{% load staticfiles %}
+
+{% block app_navigation_items %}
+  <li class="title">App Navigation</li>
+  <li><a href="{% url 'tjinc:home' %}">Home</a></li>
+  <li><a href="{% url 'tjinc:help' %}">Help</a></li>
+  <li class="active"><a href="{% url 'tjinc:tech' %}">Technical Documentation</a></li>
+{% endblock %}
+
+{% block app_content %}
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+h1
+	{mso-style-link:"Heading 1 Char";
+	margin-top:24.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Cambria",serif;
+	color:#365F91;}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:"Cambria",serif;
+	color:#4F81BD;}
+p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
+	{mso-style-link:"Footnote Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"Header Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"Footer Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	font-size:9.0pt;
+	font-family:"Calibri",sans-serif;
+	color:#4F81BD;
+	font-weight:bold;}
+span.MsoFootnoteReference
+	{vertical-align:super;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-link:"Title Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:15.0pt;
+	margin-left:0in;
+	border:none;
+	padding:0in;
+	font-size:26.0pt;
+	font-family:"Cambria",serif;
+	color:#17365D;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
+	{mso-style-link:"Title Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	border:none;
+	padding:0in;
+	font-size:26.0pt;
+	font-family:"Cambria",serif;
+	color:#17365D;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
+	{mso-style-link:"Title Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	border:none;
+	padding:0in;
+	font-size:26.0pt;
+	font-family:"Cambria",serif;
+	color:#17365D;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
+	{mso-style-link:"Title Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:15.0pt;
+	margin-left:0in;
+	border:none;
+	padding:0in;
+	font-size:26.0pt;
+	font-family:"Cambria",serif;
+	color:#17365D;
+	letter-spacing:.25pt;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-link:"Balloon Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:8.0pt;
+	font-family:"Tahoma",sans-serif;}
+span.HeaderChar
+	{mso-style-name:"Header Char";
+	mso-style-link:Header;}
+span.FooterChar
+	{mso-style-name:"Footer Char";
+	mso-style-link:Footer;}
+span.TitleChar
+	{mso-style-name:"Title Char";
+	mso-style-link:Title;
+	font-family:"Cambria",serif;
+	color:#17365D;
+	letter-spacing:.25pt;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:"Cambria",serif;
+	color:#4F81BD;
+	font-weight:bold;}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-link:"Heading 1";
+	font-family:"Cambria",serif;
+	color:#365F91;
+	font-weight:bold;}
+span.BalloonTextChar
+	{mso-style-name:"Balloon Text Char";
+	mso-style-link:"Balloon Text";
+	font-family:"Tahoma",sans-serif;}
+span.FootnoteTextChar
+	{mso-style-name:"Footnote Text Char";
+	mso-style-link:"Footnote Text";}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:10.0pt;
+	line-height:115%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink=purple>
+
+<div class=WordSection1>
+
+<div style='border:none;border-bottom:solid #4F81BD 1.0pt;padding:0in 0in 4.0pt 0in'>
+
+<p class=MsoTitle>Software Design Document</p>
+
+</div>
+
+<h1>Technical Specifications</h1>
+
+<h2>Software Details</h2>
+
+<p class=MsoNormal style='text-align:justify'>This web page application was
+created in the Tethys app platform. It is used to display an interactive map of
+user-defined watersheds in Utah County. The app is written in HTML and Javascript
+and was built in a virtual machine (Oracle VM VirtualBox). It references a
+watershed delineation tool available on the BYU geoserver, which was created
+using ModelBuilder in ArcMap 10.3. The code was written in PyCharm editor. The
+web app is designed to run in the Tethys portal. If the tool is being run
+locally and not from the server, Tethys must be launched in the virtual machine
+terminal prior to opening the web browser to view the webpage. The source code
+may be obtained at <a href="https://github.com/astraiophos/tethysapp-tjinc.git">gitHub</a>
+. Documentation on the Tethys Platform can be found at <a
+href="http://docs.tethysplatform.org/en/latest/index.html"><span
+style='background:white'>http://docs.tethysplatform.org/en/latest/index.html</span></a><span
+style='color:#222222;background:white'>. </span></p>
+
+<h2 style='text-align:justify'>Compatibility and Limitations </h2>
+
+<p class=MsoNormal style='text-align:justify'>The web page is available for
+viewing in any web browser. For running locally, the code is designed to run in
+Linux. It can also be run on Mac OSX and Windows, but the installation is
+slightly different. See <a
+href="http://docs.tethysplatform.org/en/latest/installation.html">http://docs.tethysplatform.org/en/latest/installation.html</a>
+for installation instructions. The machine requires at least a 64-bit operating
+system and 8.00 GB of RAM. </p>
+
+<h2 style='text-align:justify'>License </h2>
+
+<p class=MsoNormal style='text-align:justify'>This script is published under
+the <span style='font-family:"Arial",sans-serif;color:black'>BSD 2-Clause
+License Copyright (c) 2013, Brigham Young University All rights reserved.
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met: </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in'><span
+style='font-family:"Arial",sans-serif;color:black'>- Redistributions of source
+code must retain the above copyright notice, this list of conditions and the
+following disclaimer.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in'><span
+style='font-family:"Arial",sans-serif;color:black'>- Redistributions in binary
+form must reproduce the above copyright notice, this list of conditions and the
+following disclaimer in the documentation and/or other materials provided with
+the distribution.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in'><span
+style='font-family:"Arial",sans-serif;color:black'>THIS SOFTWARE IS PROVIDED BY
+THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR
+IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
+EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT,
+INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+OF THE POSSIBILITY OF SUCH DAMAGE.</span></p>
+
+<h2 style='text-align:justify'><span style='color:windowtext'>Purpose</span></h2>
+
+<p class=MsoNormal style='text-align:justify'>The purpose of this code is to
+create a map that displays information conveying the spatial extent of
+watersheds in Utah County, with outlets defined by the user. The map also
+displays a base topographic map with computed flowlines for geo-referencing.
+The polygon of the resulting watershed is available for viewing to user once
+the outlet has been defined and the geoprocessing tool has completed.  Buttons
+are available to the right side of the window that allow the user to view any
+desired help files. This is to provide further clarification to the user on how
+the web page works. </p>
+
+<h2 style='text-align:justify'><span style='color:windowtext'>Main Files (what’s
+needed for user)</span></h2>
+
+<p class=MsoNormal style='text-align:justify'>For this website, the user is not
+required to provide any necessary files. All files required to run the
+geoprocessing tool within the web page have already been provided on the
+geoserver maintained by BYU. These files include two *.py files (called
+controller.py and app.py, see Figure 1) and one primary *.html file (called home.html).</p>
+
+<p class=MsoNormal align=center style='text-align:center;page-break-after:avoid'><span
+style='position:absolute;z-index:251661312;left:0px;margin-left:190px;
+margin-top:18px;width:290px;height:32px'></span><img width=623 height=422
+src="/static/tjinc/images/Screenshots/image007.png"></p>
+
+<p class=MsoCaption style='text-align:center'><a name="_Ref448155098"><span
+style='color:windowtext'>Figure </span></a><span
+style='color:windowtext'>1</span><span style='color:windowtext'>: Location of
+*.py Files</span></p>
+
+ <p class=MsoNormal align=center style='text-align:center;page-break-after:avoid'><span
+style='position:absolute;z-index:251661312;left:0px;margin-left:190px;
+margin-top:18px;width:290px;height:32px'></span><img border=0
+width=623 height=422 id="Picture 1"
+src="/static/tjinc/images/Screenshots/image008.png">
+
+<p class=MsoCaption style='text-align:center'> <span  style='color:windowtext'>Figure
+</span><span style='color:windowtext'>2</span><span style='color:windowtext'>:
+Location of home.html</span></p>
+
+<h2 style='text-align:justify'><span style='color:windowtext'>Structure</span></h2>
+
+<p class=MsoNormal style='text-align:justify'>The code is structured based off
+of the actions of the user (Fig. 3). Every action taken by the user (top line
+of the flow chart) will launch a particular function, as outlined below.
+Loading the web page is considered the first overall function is required in
+order to run the other two possible functions on the page.  This is to provide
+simplicity for the user. </p>
+ <p class=MsoNormal align=center style='text-align:left;page-break-after:avoid'><span
+style='position:absolute;z-index:251663360;left:0px;margin-left:193px;
+margin-top:19px;width:360px;height:32px'></span></p>
+
+<p class=MsoNormal align=center style='text-align:center;page-break-after:avoid'><img
+border=0 width=720 height=322 id="Picture 11"
+src="/static/tjinc/images/Screenshots/image009.png"></p>
+
+<p class=MsoCaption style='text-align:justify'><span style='color:windowtext'>Figure
+</span><span style='color:windowtext'>3</span><span style='color:windowtext'>:
+Web App Code Structure</span></p>
+
+<h2 style='text-align:justify'><span style='color:windowtext'>Key Functions and
+Classes</span></h2>
+
+<p class=MsoNormal style='text-align:justify'>Table 1 shows the key functions
+in ArcMap models and what their functions are:</p>
+
+<p class=MsoCaption align=center style='text-align:center'><span
+style='color:windowtext'>Table </span><span
+style='color:windowtext'>1</span><span style='color:windowtext'>: ArcMap Tools
+and Settings</span></p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=570
+ style='width:427.5pt;border-collapse:collapse'>
+ <tr style='height:15.0pt'>
+  <td width=204 nowrap style='width:153.0pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal><span style='color:black'>Descriptive Name</span></p>
+  </td>
+  <td width=171 nowrap style='width:128.0pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal><span style='color:black'>Tool</span></p>
+  </td>
+  <td width=195 nowrap style='width:146.5pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal><span style='color:black'>Tool Settings</span></p>
+  </td>
+ </tr>
+ <tr style='height:30.0pt'>
+  <td width=204 style='width:153.0pt;padding:0in 5.4pt 0in 5.4pt;height:30.0pt'>
+  <p class=MsoNormal><span style='color:black'>Calculate Flow Directions within
+  Region</span></p>
+  </td>
+  <td width=171 nowrap style='width:128.0pt;padding:0in 5.4pt 0in 5.4pt;
+  height:30.0pt'>
+  <p class=MsoNormal><span style='color:black'>Flow Direction</span></p>
+  </td>
+  <td width=195 style='width:146.5pt;padding:0in 5.4pt 0in 5.4pt;height:30.0pt'>
+  <p class=MsoNormal><span style='color:black'>[Default]</span></p>
+  </td>
+ </tr>
+ <tr style='height:15.0pt'>
+  <td width=204 style='width:153.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal><span style='color:black'>Calculate Watersheds</span></p>
+  </td>
+  <td width=171 nowrap style='width:128.0pt;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt'>
+  <p class=MsoNormal><span style='color:black'>Watershed</span></p>
+  </td>
+  <td width=195 style='width:146.5pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal><span style='color:black'>[Default]</span></p>
+  </td>
+ </tr>
+ <tr style='height:30.0pt'>
+  <td width=204 style='width:153.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:30.0pt'>
+  <p class=MsoNormal><span style='color:black'>Convert Watershed Regions from
+  Raster Data to Polygons</span></p>
+  </td>
+  <td width=171 nowrap style='width:128.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:30.0pt'>
+  <p class=MsoNormal><span style='color:black'>Raster to Polygon</span></p>
+  </td>
+  <td width=195 style='width:146.5pt;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:30.0pt'>
+  <p class=MsoNormal><span style='color:black'>[Default]</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=570
+ style='width:427.5pt;border-collapse:collapse'>
+ <tr style='height:15.0pt'>
+  <td width=204 nowrap style='width:153.0pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal><span style='color:black'>Descriptive Name</span></p>
+  </td>
+  <td width=171 nowrap style='width:128.0pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal><span style='color:black'>Tool</span></p>
+  </td>
+  <td width=195 nowrap style='width:146.5pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal><span style='color:black'>Tool Settings</span></p>
+  </td>
+ </tr>
+ <tr style='height:30.0pt'>
+  <td width=204 style='width:153.0pt;padding:0in 5.4pt 0in 5.4pt;height:30.0pt'>
+  <p class=MsoNormal><span style='color:black'>Imports all essential Javascript
+  Modules</span></p>
+  </td>
+  <td width=171 nowrap style='width:128.0pt;padding:0in 5.4pt 0in 5.4pt;
+  height:30.0pt'>
+  <p class=MsoNormal><span style='color:black'>Require ([])</span></p>
+  </td>
+  <td width=195 style='width:146.5pt;padding:0in 5.4pt 0in 5.4pt;height:30.0pt'>
+  <p class=MsoNormal><span style='color:black'>[Default]</span></p>
+  </td>
+ </tr>
+ <tr style='height:15.0pt'>
+  <td width=204 style='width:153.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal><span style='color:black'>Imported basemap layer to web
+  page</span></p>
+  </td>
+  <td width=171 nowrap style='width:128.0pt;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt'>
+  <p class=MsoNormal><span style='color:black'>Esri.layers.*</span></p>
+  </td>
+  <td width=195 style='width:146.5pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal><span style='color:black'>[Default]</span></p>
+  </td>
+ </tr>
+ <tr style='height:30.0pt'>
+  <td width=204 style='width:153.0pt;padding:0in 5.4pt 0in 5.4pt;height:30.0pt'>
+  <p class=MsoNormal><span style='color:black'>Imported ArcMap tool from
+  geoserver</span></p>
+  </td>
+  <td width=171 nowrap style='width:128.0pt;padding:0in 5.4pt 0in 5.4pt;
+  height:30.0pt'>
+  <p class=MsoNormal><span style='color:black'>Geoprocessor()</span></p>
+  </td>
+  <td width=195 style='width:146.5pt;padding:0in 5.4pt 0in 5.4pt;height:30.0pt'>
+  <p class=MsoNormal><span style='color:black'>[Default]</span></p>
+  </td>
+ </tr>
+ <tr style='height:30.0pt'>
+  <td width=204 style='width:153.0pt;padding:0in 5.4pt 0in 5.4pt;height:30.0pt'>
+  <p class=MsoNormal><span style='color:black'>Imported Dot Graphic</span></p>
+  </td>
+  <td width=171 nowrap style='width:128.0pt;padding:0in 5.4pt 0in 5.4pt;
+  height:30.0pt'>
+  <p class=MsoNormal><span style='color:black'>Esri.Graphic()</span></p>
+  </td>
+  <td width=195 style='width:146.5pt;padding:0in 5.4pt 0in 5.4pt;height:30.0pt'>
+  <p class=MsoNormal><span style='color:black'>[Default]</span></p>
+  </td>
+ </tr>
+ <tr style='height:30.0pt'>
+  <td width=204 style='width:153.0pt;padding:0in 5.4pt 0in 5.4pt;height:30.0pt'>
+  <p class=MsoNormal><span style='color:black'>Imported Progress Cursor</span></p>
+  </td>
+  <td width=171 nowrap style='width:128.0pt;padding:0in 5.4pt 0in 5.4pt;
+  height:30.0pt'>
+  <p class=MsoNormal><span style='color:black'>.setMapCursor()</span></p>
+  </td>
+  <td width=195 style='width:146.5pt;padding:0in 5.4pt 0in 5.4pt;height:30.0pt'>
+  <p class=MsoNormal><span style='color:black'>[progress]</span></p>
+  </td>
+ </tr>
+ <tr style='height:30.0pt'>
+  <td width=204 style='width:153.0pt;padding:0in 5.4pt 0in 5.4pt;height:30.0pt'>
+  <p class=MsoNormal><span style='color:black'>Adding graphics to map</span></p>
+  </td>
+  <td width=171 nowrap style='width:128.0pt;padding:0in 5.4pt 0in 5.4pt;
+  height:30.0pt'>
+  <p class=MsoNormal><span style='color:black'>.graphics.add()</span></p>
+  </td>
+  <td width=195 style='width:146.5pt;padding:0in 5.4pt 0in 5.4pt;height:30.0pt'>
+  <p class=MsoNormal><span style='color:black'>[Default]</span></p>
+  </td>
+ </tr>
+ <tr style='height:30.0pt'>
+  <td width=204 style='width:153.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:30.0pt'>
+  <p class=MsoNormal><span style='color:black'>Setting extent of map</span></p>
+  </td>
+  <td width=171 nowrap style='width:128.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:30.0pt'>
+  <p class=MsoNormal><span style='color:black'>.setExtent()</span></p>
+  </td>
+  <td width=195 style='width:146.5pt;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:30.0pt'>
+  <p class=MsoNormal><span style='color:black'>[Default]</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoCaption style='text-align:justify;page-break-after:avoid'><span
+style='color:windowtext'>Table </span><span
+style='color:windowtext'>2</span><span style='color:windowtext'>: Key Functions
+and Their Purposes</span></p>
+
+<h2 style='text-align:justify'><span style='color:windowtext'>User Interface</span></h2>
+
+<p class=MsoNormal style='text-align:justify'>Figure 4 shows the full webpage.
+To the side of the main window is the side menu, where the user may click on
+one of three buttons which links to either the main window, the user help file,
+or the technical specifications file. In the main window, the user defines the
+outlet of a desired watershed delineation by clicking on one of the visible
+flowlines. With the left-mouse click, an open point will indicate the outlet
+point. After a few minutes of processing, the delineated watershed will appear
+(Figure 4). This user interaction feature is used so the user can define any
+possible watershed or sub-basin at any outlet location.</p>
+
+<p class=MsoNormal align=center style='text-align:center;page-break-after:avoid'><img
+border=0 width=625 height=343 id="Picture 2"
+src="/static/tjinc/images/Screenshots/image010.png"></p>
+
+<p class=MsoCaption style='text-align:justify'><a name="_Ref448156198"><span
+style='color:windowtext'>Figure </span></a><span
+style='color:windowtext'>4</span><span style='color:windowtext'>: Full Webpage</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;page-break-after:avoid'><img
+border=0 width=614 height=338 id="Picture 4"
+src="/static/tjinc/images/Screenshots/image006.png"></p>
+
+<p class=MsoCaption style='text-align:justify'><a name="_Ref448156442"><span
+style='color:windowtext'>Figure </span></a><span
+style='color:windowtext'>5</span><span style='color:windowtext'>: Delineated
+Watershed</span></p>
+
+<p class=MsoNormal style='text-align:justify'>The two links in the navigation
+pane take the user to the support documentation for this webpage. These options
+are to provide clarification of the web page interaction and construction. </p>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>
+
+{% endblock %}
+
+
+
+{% block app_actions %}
+
+{% endblock %}

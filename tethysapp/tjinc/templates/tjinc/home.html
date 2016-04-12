@@ -4,7 +4,7 @@
   <li class="title">App Navigation</li>
   <li class="active"><a href="{% url 'tjinc:home' %}">Home</a></li>
   <li><a href="{% url 'tjinc:help' %}">Help</a></li>
-  <li><a href="{% url 'tjinc:buffer' %}">Buffer Test</a></li>
+  <li><a href="{% url 'tjinc:tech' %}">Technical Documentation</a></li>
 {% endblock %}
 
 {% block app_content %}
@@ -16,6 +16,6 @@
 
 
 {% block app_actions %}
-  <a href="" class="btn btn-default">Next</a>
-  <a href="" class="btn btn-default">Back</a>
+  <a href="{% url 'tjinc:license' %}">License</a>
+
 {% endblock %}

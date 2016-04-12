@@ -1,0 +1,14 @@
+setup.py
+tethysapp/__init__.py
+tethysapp/tjinc/__init__.py
+tethysapp/tjinc/app.py
+tethysapp/tjinc/controllers.py
+tethysapp/tjinc/handoff.py
+tethysapp/tjinc/init_stores.py
+tethysapp/tjinc/model.py
+tethysapp_tjinc.egg-info/PKG-INFO
+tethysapp_tjinc.egg-info/SOURCES.txt
+tethysapp_tjinc.egg-info/dependency_links.txt
+tethysapp_tjinc.egg-info/namespace_packages.txt
+tethysapp_tjinc.egg-info/not-zip-safe
+tethysapp_tjinc.egg-info/top_level.txt

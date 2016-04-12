@@ -19,6 +19,22 @@ def help(request):
 
     return render(request, 'tjinc/help.html', context)
 
+def tech(request):
+    """
+    Controller for the app help page.
+    """
+    context = {}
+
+    return render(request, 'tjinc/tech.html', context)
+
+def license(request):
+    """
+    Controller for the app help page.
+    """
+    context = {}
+
+    return render(request, 'tjinc/license.html', context)
+
 
 def buffer(request):
     """
