@@ -1,0 +1,381 @@
+{% extends "tjinc/base.html" %}
+
+{% load staticfiles %}
+
+{% block app_navigation_items %}
+  <li class="title">App Navigation</li>
+  <li><a href="{% url 'tjinc:home' %}">Home</a></li>
+  <li class="active"><a href="{% url 'tjinc:help' %}">Help</a></li>
+  <li><a href="{% url 'tjinc:tech' %}">Technical Documentation</a></li>
+{% endblock %}
+
+{% block app_content %}
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:"Cambria",serif;
+	color:#4F81BD;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"Header Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"Footer Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	font-size:9.0pt;
+	font-family:"Calibri",sans-serif;
+	color:#4F81BD;
+	font-weight:bold;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-link:"Title Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:15.0pt;
+	margin-left:0in;
+	border:none;
+	padding:0in;
+	font-size:26.0pt;
+	font-family:"Cambria",serif;
+	color:#17365D;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
+	{mso-style-link:"Title Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	border:none;
+	padding:0in;
+	font-size:26.0pt;
+	font-family:"Cambria",serif;
+	color:#17365D;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
+	{mso-style-link:"Title Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	border:none;
+	padding:0in;
+	font-size:26.0pt;
+	font-family:"Cambria",serif;
+	color:#17365D;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
+	{mso-style-link:"Title Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:15.0pt;
+	margin-left:0in;
+	border:none;
+	padding:0in;
+	font-size:26.0pt;
+	font-family:"Cambria",serif;
+	color:#17365D;
+	letter-spacing:.25pt;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-link:"Balloon Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:8.0pt;
+	font-family:"Tahoma",sans-serif;}
+span.HeaderChar
+	{mso-style-name:"Header Char";
+	mso-style-link:Header;}
+span.FooterChar
+	{mso-style-name:"Footer Char";
+	mso-style-link:Footer;}
+span.TitleChar
+	{mso-style-name:"Title Char";
+	mso-style-link:Title;
+	font-family:"Cambria",serif;
+	color:#17365D;
+	letter-spacing:.25pt;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:"Cambria",serif;
+	color:#4F81BD;
+	font-weight:bold;}
+span.BalloonTextChar
+	{mso-style-name:"Balloon Text Char";
+	mso-style-link:"Balloon Text";
+	font-family:"Tahoma",sans-serif;}
+span.apple-converted-space
+	{mso-style-name:apple-converted-space;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:10.0pt;
+	line-height:115%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink=purple>
+
+<div class=WordSection1>
+
+<div style='border:none;border-bottom:solid #4F81BD 1.0pt;padding:0in 0in 4.0pt 0in'>
+
+<p class=MsoTitle style='text-align:justify'><span style='color:windowtext'>End
+User Document</span></p>
+
+</div>
+
+<h2 style='text-align:justify'><span style='color:windowtext'>Purpose</span></h2>
+
+<p class=MsoNormal style='text-align:justify'>The purpose of this code is to
+create an interactive online topographic map that displays the watershed
+delineation from user-defined outlet points within Utah County. The map also displays
+previously determined flow-lines based of a DEM of the region. These flowlines
+are meant for the user to know where to click in order to delineate a watershed.
+Two additional pages are provided in the side menu for the benefit of the user
+as help files, including an end user document and technical specifications
+document.</p>
+
+<h2 style='text-align:justify'><span style='color:windowtext'>Script
+Acquisition</span></h2>
+
+<p class=MsoNormal style='text-align:justify'>The watershed delineation tool
+was formulated in ModelBuilder in ArcMap 10.3. It was then uploaded to the BYU
+geoserver and is available at geoserver.byu.edu under the TJ Dam Power folder. This
+tool was then uploaded to the tethys app from various scripts written in HTML
+and javascript, which were built in a virtual machine (Oracle VM VirtualBox).
+This code was written in PyCharm. The web app is designed to run in the Tethys
+portal. If run locally, Tethys must be launched in the virtual machine terminal
+prior to opening the web browser to view the webpage. Contact either Jacob
+Fullerton or Trey McGhin to obtain the code at <a
+href="mailto:jacobbfull@gmail.com">jacobbfull@gmail.com</a> and <a
+href="mailto:creden791@gmail.com"><span style='background:white'>creden791@gmail.com</span></a><span
+style='color:#222222;background:white'> respectively. </span></p>
+
+<h2 style='text-align:justify'><span style='color:windowtext;background:white'>Software/Hardware
+Restrictions and Licensing </span></h2>
+
+<p class=MsoNormal style='text-align:justify'>The code is designed to run in
+Linux. It can also be run on Mac OSX and Windows, but the installation is
+slightly different. See <a
+href="http://docs.tethysplatform.org/en/latest/installation.html">http://docs.tethysplatform.org/en/latest/installation.html</a>
+for installation instructions. The machine requires at least a 64-bit operating
+system and 8.00 GB of RAM. </p>
+
+<p class=MsoNormal style='text-align:justify'>This script is published under
+the MIT license. Permission is hereby granted, free of charge, to any person
+obtaining a copy of this software and associated documentation files (the
+&quot;Software&quot;), to deal in the Software without restriction, including,
+without limitation, the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to permit persons
+to whom the Software is furnished to do so, subject to the following
+conditions:</p>
+
+<p class=MsoNormal style='text-align:justify'>THE SOFTWARE IS PROVIDED &quot;AS
+IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE
+AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF
+CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+
+<h2 style='text-align:justify'><span style='color:windowtext'>Launching the
+Website</span></h2>
+
+<p class=MsoNormal style='text-align:justify'>The website can be accessed by
+simply going to &lt;10.18.32.30&gt; and clicking on the “TJInc Utah County
+Watershed Delineator.” If the user wants to run the code locally, before navigating
+to the webpage, you need to launch the Tethys portal in your Linux virtual
+machine. Open a terminal and execute the following commands:</p>
+
+<p class=MsoNormal style='text-align:justify'><img border=0 width=535
+height=71 id="Picture 12" src="/static/tjinc/images/Screenshots/image001.png"></p>
+
+<p class=MsoNormal style='text-align:justify'>To view the app, execute the
+following code:</p>
+
+<p class=MsoNormal style='text-align:justify'><img border=0 width=545
+height=88 id="Picture 13" src="/static/tjinc/images/Screenshots/image002.png"></p>
+
+<h2 style='text-align:justify'><span style='color:windowtext'>File Preparation</span></h2>
+
+<p class=MsoNormal style='text-align:justify'>The user does not need any files
+prior to launching the website. However, to run the web app locally, you need
+the web page files (*.html files called ‘home’, ‘base’, ‘help’, and ‘tech’),
+the application *.py file (called app.py), and the controller.  The necessary
+folder structure is shown in Figure 1 and Figure
+2. The tethysapp-tjinc needs to be initialized in the Tethys environment (see
+the tutorial “Create a New Tethys App Project” in &lt;<a
+href="http://www.tethysplatform.org/">http://www.tethysplatform.org/</a>&gt;).</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img border=0
+width=300 height=334 id="Picture 1" src="/static/tjinc/images/Screenshots/image003.png"></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref445362976"><span style='color:windowtext'>Figure </span></a><span style='color:windowtext'>1</span><span style='color:windowtext'>: Folder
+structure</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify;page-break-after:avoid'>&nbsp;</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img border=0
+width=241 height=328 id="Picture 4" src="/static/tjinc/images/Screenshots/image004.png"></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref445363135"><span style='color:windowtext'>Figure </span></a><span style='color:windowtext'>2</span><span style='color:windowtext'>: Folder
+structure</span></p>
+
+<p class=MsoNormal style='text-align:justify'>In order to run the web app
+locally, the files mentioned above need to be in the appropriate folders as
+described in figures 1-3 and the Tethys app needs to be launched via your
+terminal. The user can access the local website at &lt;<a
+href="http://127.0.0.1:8000/apps"><span style='font-family:"Arial",sans-serif;
+color:#9B59B6;background:#FCFCFC'>http://127.0.0.1:8000/apps</span></a>&gt;.
+The default login credentials is user: student, password: pass.</p>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<h2 style='text-align:justify'><span style='color:windowtext'>Using the Web
+Application</span></h2>
+
+<p class=MsoNormal style='text-align:justify'>Once the web application is
+launched in your browser, the topographic base map will appear with the
+previously determined flowlines on top, as indicated in <b><span
+style='font-size:9.0pt;line-height:115%'>Figure 3</span></b>. In order to
+delineate the watershed of the user’s choosing, the user will simply need to
+click with the cursor at any point on the flowlines. Please keep in mind that
+the user will need to zoom close to be sure to click on the flowlines.
+Otherwise, the user could click off of the flowlines and not receive an
+accurate result. Once the user has clicked on the flowlines, the tool will
+begin the geoprocessing. A progress status will indicate this to the user. In
+few minutes, the resulting delineated watershed will appear on the topographic
+map. The spatial extent of this watershed can then be compared to the region by
+the topographic base map (<b><span style='font-size:9.0pt;line-height:115%'>Figure
+4</span></b>).</p>
+
+<p class=MsoNormal style='text-align:center;page-break-after:avoid'><img
+border=0 width=624 height=277 id="Picture 2"
+src="/static/tjinc/images/Screenshots/image005.png"></p>
+
+<p class=MsoNormal align=center style='text-align:center'>
+<b><span style='font-size:9.0pt;line-height:115%'>Figure </span></b><b><span style='font-size:9.0pt;line-height:115%'>3</span></b><b><span style='font-size:
+9.0pt;line-height:115%'>: Flowlines Basemap</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;page-break-after:avoid'><img
+border=0 width=614 height=338 id="Picture 3"
+src="/static/tjinc/images/Screenshots/image006.png"></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span style='font-size:9.0pt;line-height:115%'>Figure </span></b><b><span style='font-size:9.0pt;line-height:115%'>4</span></b><b><span style='font-size:
+9.0pt;line-height:115%'>: Delineated Watershed</span></b></p>
+
+<p class=MsoCaption style='text-align:justify'><span style='font-size:11.0pt;
+color:windowtext;font-weight:normal'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify;page-break-after:avoid'>&nbsp;</p>
+
+<p class=MsoCaption style='text-align:justify'><span style='color:windowtext'>&nbsp;</span></p>
+
+<p class=MsoCaption style='text-align:justify'><span style='color:windowtext'>&nbsp;</span></p>
+
+<p class=MsoCaption style='text-align:justify'><span style='color:windowtext'>&nbsp;</span></p>
+
+<p class=MsoCaption style='text-align:justify'><span style='color:windowtext'>&nbsp;</span></p>
+
+<p class=MsoCaption style='text-align:justify'><span style='color:windowtext'>&nbsp;</span></p>
+
+<p class=MsoCaption style='text-align:justify'><span style='color:windowtext'>&nbsp;</span></p>
+
+<p class=MsoCaption style='text-align:justify'><span style='color:windowtext'>&nbsp;</span></p>
+
+<p class=MsoCaption style='text-align:justify'><span style='color:windowtext'>&nbsp;</span></p>
+
+<p class=MsoCaption style='text-align:justify'><span style='color:windowtext'>&nbsp;</span></p>
+
+<p class=MsoCaption style='text-align:justify'><span style='color:windowtext'>&nbsp;</span></p>
+
+<p class=MsoCaption style='text-align:justify'><span style='color:windowtext'>&nbsp;</span></p>
+
+<p class=MsoCaption style='text-align:justify'><span style='color:windowtext'>&nbsp;</span></p>
+
+<p class=MsoCaption style='text-align:justify'><span style='color:windowtext'>&nbsp;</span></p>
+
+<p class=MsoCaption style='text-align:justify'><span style='color:windowtext'>&nbsp;</span></p>
+
+<p class=MsoCaption style='text-align:justify'><span style='color:windowtext'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>
+
+{% endblock %}
+
+
+
+{% block app_actions %}
+
+{% endblock %}

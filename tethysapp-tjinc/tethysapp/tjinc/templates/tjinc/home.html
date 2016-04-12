@@ -1,0 +1,21 @@
+{% extends "tjinc/base.html" %}
+
+{% block app_navigation_items %}
+  <li class="title">App Navigation</li>
+  <li class="active"><a href="{% url 'tjinc:home' %}">Home</a></li>
+  <li><a href="{% url 'tjinc:help' %}">Help</a></li>
+  <li><a href="{% url 'tjinc:tech' %}">Technical Documentation</a></li>
+{% endblock %}
+
+{% block app_content %}
+  <h1>Welcome!</h1>
+  <p>Click on a river system to delineate its watershed.</p>
+  <div id = "hydromap"></div>
+{% endblock %}
+
+
+
+{% block app_actions %}
+  <a href="{% url 'tjinc:license' %}">License</a>
+
+{% endblock %}
